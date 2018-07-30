@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Carol's math sheet</title>
+	</head>
+
+	<body>
+		<div id=count>
+			<h2><font color="pink">Count the numbers</font></h2> 
+			<div>
+				<b>  Count Number From </b> <input type="number" id="start", name="Count Number From"/>
+				<b>  Count In <b> <input type="number" id="countIn", name="Count In"/>
+				<b>  Count Number To <b> <input type="number" id="end", name="Count number To" />
+						<!--<button onclick="startACount()"><b>Start</b></button>-->
+			</div>
+			<div id="question"></div>
+			<p id="tips"></p>
+			<!--			<button id="checkCount" disabled="true" onclick="checkCount()">Check your answer</button>-->
+			<div id="answer"></div>
+		</div>
+
+		<p> </p>
+		<p> </p>
+
+		<div id=calculation>
+			<h2><font color="purple">Addition(+) and Subtraction(-)</font></h2>
+			<div>
+				<button id="startPuzzle" onclick="startPuzzle()"><big>GO!</big></button>
+				<button id="additionOnly" onclick="additionOnly()"><big>Addition Only</big></button>
+			</div>
+			<div id="timer"></div>
+			<div id="puzzles"></div>
+			<div id="result"></div>
+			<div id="history"></div>
+		</div>
+	</body>
+
+	<script src="count.js"></script>
+	<script src="calculate.js"></script>
+
+</html>
