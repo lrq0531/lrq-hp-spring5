@@ -16,6 +16,12 @@ import javax.servlet.ServletRegistration;
 @EnableWebMvc
 @ComponentScan(basePackages = {"com.auth0.samples"})
 public class SpringAppConfig implements WebApplicationInitializer {
+
+    public SpringAppConfig () {
+        String s = "Track the bean intialization.";
+        System.out.println(s);
+    }
+
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
 
