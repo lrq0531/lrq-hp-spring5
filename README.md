@@ -13,3 +13,23 @@ article on Auth0's blog. Head there to learn how to embed Tomcat 8 on a Spring 5
 # run uber jar
 java -jar build/libs/embedded-spring-5-1.0-SNAPSHOT-all.jar
 ```
+
+
+@Configuration
+@EnableWebMvc
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
+@ComponentScan("kiwiplan.lmas")
+@EnableTransactionManagement
+@Autowired
+@Qualifier("lmasTxManager")
+@DependsOn("lmasSessionFactory")
+@ControllerAdvice
+@Component
+@ExceptionHandler(ConstraintViolationException.class)
+@ResponseBody
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+@ExceptionHandler(MethodArgumentNotValidException.class)
+@ResponseBody
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+@Import({APIDocsConfig.class, JsonConfig.class, RestCommonExceptionConfig.class})
